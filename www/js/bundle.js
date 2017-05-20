@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 3);
@@ -73,13 +73,13 @@
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(9)
+  __webpack_require__(10)
 }
-var Component = __webpack_require__(7)(
+var Component = __webpack_require__(8)(
   /* script */
   __webpack_require__(2),
   /* template */
-  __webpack_require__(8),
+  __webpack_require__(9),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -9804,7 +9804,7 @@ Vue$3.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["a"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6), __webpack_require__(12)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(7), __webpack_require__(13)))
 
 /***/ }),
 /* 2 */
@@ -9818,11 +9818,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
+console.log('asd');
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            message: 'ola'
+            message: 'ola 4'
         };
     }
 });
@@ -9855,7 +9857,7 @@ exports = module.exports = __webpack_require__(5)(true);
 
 
 // module
-exports.push([module.i, "\nbody h1 {\n  color: red;\n}\n", "", {"version":3,"sources":["/home/david/projects/webpack-learn/src/js/App.vue"],"names":[],"mappings":";AAiBA;EAEQ,WACJ;CAAE","file":"App.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbody {\n    h1 {\n        color: red\n    }\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "\nbody h1 {\n  color: red;\n}\n", "", {"version":3,"sources":["/home/david/projects/webpack-learn/src/js/App.vue"],"names":[],"mappings":";AAmBA;EAEQ,WACJ;CAAE","file":"App.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbody {\n    h1 {\n        color: red\n    }\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -9944,6 +9946,12 @@ function toComment(sourceMap) {
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/logo.png?82b9c7a5a3f405032b1db71a25f67021";
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -10133,7 +10141,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -10230,11 +10238,15 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h1', [_vm._v(_vm._s(_vm.message))])])
+  return _c('div', [_c('img', {
+    attrs: {
+      "src": __webpack_require__(6)
+    }
+  }), _vm._v(" "), _c('h1', [_vm._v(_vm._s(_vm.message))])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -10245,7 +10257,7 @@ if (false) {
 }
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -10255,7 +10267,7 @@ var content = __webpack_require__(4);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(10)("00632cdd", content, false);
+var update = __webpack_require__(11)("00632cdd", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -10271,7 +10283,7 @@ if(false) {
 }
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -10290,7 +10302,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(11)
+var listToStyles = __webpack_require__(12)
 
 /*
 type StyleObject = {
@@ -10492,7 +10504,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 /**
@@ -10525,7 +10537,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 var g;

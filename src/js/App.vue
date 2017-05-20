@@ -1,14 +1,16 @@
 <template>
   <div>
+      <img src="~image/logo.png">
       <h1>{{message}}</h1>
   </div>
 </template>
 
 <script>
+console.log('asd');
 export default {
   data () {
       return {
-          message : 'ola',
+          message : 'ola 4',
       }
   }
 }
